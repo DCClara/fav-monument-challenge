@@ -172,6 +172,15 @@
       width: 100%;
       margin: 0 auto;
     }
+    footer {
+      background: #9a7a7d;
+
+      padding: 50px 0;
+    }
+    footer a {
+      text-decoration: none;
+      color: #0acaf0;
+    }
     .about-section .row {
       margin-bottom: 100px;
     }
@@ -187,6 +196,23 @@
     }
     .tours-section h3 {
       margin: 150px 0;
+    }
+    #backToTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 400px;
+      right: 40px;
+      font-size: 24px;
+      background-color: #fff;
+      color: #000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.3s ease-in-out;
+    }
+    #backToTopBtn:hover {
+      opacity: 1;
     }
     @media screen and (min-width: 1024px) {
     }
@@ -408,7 +434,7 @@
           >
         </h3>
       </section>
-      <section class="tours-section">
+      <section class="tours-section" id="tours">
         <h2>Book Tours and Tickets</h2>
         <h5>Explore Al-Khazneh Temple with knowledgable guides</h5>
         <div class="tours-img-container">
@@ -480,7 +506,28 @@
       </section>
     </main>
 
-    <footer></footer>
+    <footer class="text-center">
+      <button id="backToTopBtn" title="Back to Top">🔝</button>
+      <p>
+        This project was coded by
+        <a href="https://dcasacodez.netlify.app" target="_blank"
+          >Danielle Casa</a
+        >
+        for the
+        <a
+          href="https://www.shecodes.io/contests/your-favorite-monument"
+          target="_blank"
+          >SheCodes.io Favorite Monument challenge</a
+        >
+        and is
+        <a
+          href="https://github.com/DCClara/fav-monument-challenge"
+          target="_blank"
+        >
+          open-sourced on GitHub</a
+        >.
+      </p>
+    </footer>
 
     <script>
       const themeToggle = document.getElementById("themeToggle");
@@ -488,6 +535,24 @@
 
       themeToggle.addEventListener("change", () => {
         body.classList.toggle("dark-theme");
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var backToTopBtn = document.getElementById("backToTopBtn");
+        window.addEventListener("scroll", function () {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            backToTopBtn.style.display = "block";
+          } else {
+            backToTopBtn.style.display = "none";
+          }
+        });
+        backToTopBtn.addEventListener("click", function () {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
       });
     </script>
   </body>
