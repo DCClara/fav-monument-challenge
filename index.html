@@ -26,9 +26,7 @@
   </head>
   <style>
     body {
-      width: 100%;
-      overflow-x: hidden;
-      margin: 0 auto;
+      margin: 0;
       font-family: "Poppins", sans-serif;
       background-color: #000;
       color: #fff;
@@ -66,7 +64,7 @@
       float: left;
       font-size: 24px;
       margin-left: 8px;
-      cursor: default;
+      cursor: pointer;
     }
     nav .navbar-right {
       float: right;
@@ -127,18 +125,15 @@
       text-align: center;
       color: white;
       width: 100%;
-      height: 96vh;
-      padding: 300px 0;
+      height: 100vh;
+      margin: 0 auto;
+      padding: 200px 0;
       background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
         url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/648/original/petra-hero-img.jpg?1704660054")
           no-repeat bottom / cover;
     }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      text-align: center;
+    h1, h2, h3, h4, h5 {
+        text-align: center;
     }
     h2 {
       font-size: 40px;
@@ -146,7 +141,7 @@
       letter-spacing: 4px;
     }
     h3 {
-      margin: 150px 0;
+        margin: 150px 0;
     }
     h5 {
       margin-bottom: 100px;
@@ -193,7 +188,8 @@
     }
     footer {
       background: #9a7a7d;
-      padding: 50px 10px;
+
+      padding: 50px 0;
     }
     footer a {
       text-decoration: none;
@@ -205,43 +201,33 @@
     .travel-section .row {
       margin: 150px 0;
     }
-    .travel-section .row p {
+    .card-body p {
       font-size: 16px;
       text-indent: 0;
     }
-
     #backToTopBtn {
       display: none;
       position: fixed;
-      bottom: 300px;
-      right: 20px;
-      font-size: 44px;
+      bottom: 400px;
+      right: 40px;
+      font-size: 24px;
       background-color: #fff;
       color: #000;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      opacity: 0.5;
+      opacity: 0.8;
       transition: opacity 0.3s ease-in-out;
     }
     #backToTopBtn:hover {
       opacity: 1;
     }
 
-    @media (max-width: 1024px) {
-      header {
-        padding: 400px 10px;
-      }
-      .about-section h6,
-      h3 {
-        margin-bottom: 50px;
-      }
-      section {
-        padding: 50px;
-      }
+    @media screen and (min-width: 1024px) {
     }
-
-    @media (max-width: 767px) {
+    @media screen and (min-width: 767px) and (max-width: 1023px) {
+    }
+    @media screen and (max-width: 767px) {
       nav a,
       .navbar-right {
         float: none;
@@ -253,9 +239,6 @@
       }
       .toggle-container {
         margin-right: 0;
-      }
-      #backToTopBtn {
-        display: none;
       }
     }
   </style>
@@ -286,11 +269,11 @@
     <main>
       <section class="about-section" id="about">
         <h2 data-aos="fade-down">
-          Jordan's Ancient Temple, Al Khazneh (The Treasury)
+          Jordan's ancient temple, Al Khazneh (The Treasury)
         </h2>
         <h5 data-aos="fade-left">Petra and the Nabataeans</h5>
         <div class="row d-flex justify-content-evenly">
-          <div class="col-xl-6 align-self-center" data-aos="fade-up">
+          <div class="col-lg-6 align-self-center" data-aos="fade-up">
             <p>
               Let me tell you about one of the coolest historical sites you'll
               ever come across - Al Khazneh! Also known as the Treasury of
@@ -319,25 +302,28 @@
               story.
             </p>
           </div>
-          <div class="col-xl-5 align-self-center" data-aos="fade-left">
+          <div class="col-lg-5 align-self-center" data-aos="fade-left">
             <img
-              class="img-fluid rounded"
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/064/original/map-of-nabataean.png?1704918077"
-              alt="Nabataean Kingdom map"
+              class="img-fluid"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/752/original/nabataean-map.png?1704738631"
+              alt="Nabataean map"
             />
             <h6 class="mt-1 text-end">A map of the Nabataean Kingdom</h6>
           </div>
         </div>
         <div class="row d-flex justify-content-evenly">
-          <div class="col-xl-5 align-self-center" data-aos="fade-right">
+          <div class="col-lg-5 align-self-center" data-aos="fade-right">
             <img
               class="img-fluid rounded"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/779/original/petra-details.jpeg?1704743333"
-              alt="The Treasury's carved details"
+              alt="Nabataean map"
             />
-            <h6 class="mt-1">The most elaborate rock-cut tombs in Petra</h6>
+            <h6 class="mt-1">
+              The fine details of the temple are some of the most elaborate
+              rock-cut tombs in Petra
+            </h6>
           </div>
-          <div class="col-xl-5 align-self-center" data-aos="fade-up">
+          <div class="col-lg-5 align-self-center" data-aos="fade-up">
             <p>
               Al Khazneh is an outstanding example of the exquisite
               craftsmanship of the
@@ -366,9 +352,9 @@
         </h3>
       </section>
       <section class="travel-section" id="travel">
-        <h2 data-aos="fade-down">Travel to Jordan and Visit Al Khazneh</h2>
+        <h2 data-aos="fade-down">Travel to Jordan and visit Al Khazneh</h2>
         <h5 data-aos="fade-up">
-          Experience the Incrediable Architecture and History
+          Experience the incrediable architecture and history
         </h5>
         <p data-aos="fade-right">
           Visiting Petra is an experience that engages all your senses. You can
@@ -379,61 +365,70 @@
           sun beating down on the red cliffs, the coolness of the shaded canyon
           walls, and the rough texture of the carved stone.
         </p>
-        <div class="row d-flex" data-aos="fade-up">
-          <div class="col-lg-4 justify-content-evenly mb-5">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/792/original/petra-airport.jpg?1704755422"
-              class="card-img-top"
-              alt="..."
-            />
-            <h4 class="mt-1">FLY</h4>
-            <p class="text-center">(AQJ) King Hussein International Airport</p>
-            <a
-              href="https://www.qatarairways.com/en-us/homepage.html?CID=SXUS23456792M&account=Google-AMERICAS-US-EN-Brand&campaign=US-Brand-Hero-EN_exact&adgroup=qatar+airways&term=qatar+airways&&&&&gad_source=1&gclid=CjwKCAiA1-6sBhAoEiwArqlGPjRmTzEZSpVAasFn6RgO6TZfwLX-nZgMD0UUfANy4gZMwKkV4np4-BoCcEEQAvD_BwE&gclsrc=aw.ds"
-              target="_blank"
-              class="btn btn-info d-block"
-              >BUY TICKETS</a
-            >
+        <div class="row d-flex justify-content-evenly" data-aos="fade-up">
+          <div class="col-lg-3 align-self-center">
+            <div class="card" style="width: 28rem">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/792/original/petra-airport.jpg?1704755422"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4 class="card-title text-center">FLY</h4>
+                <p class="card-text text-center">
+                  (AQJ) King Hussein International Airport
+                </p>
+                <a
+                  href="https://www.qatarairways.com/en-us/homepage.html?CID=SXUS23456792M&account=Google-AMERICAS-US-EN-Brand&campaign=US-Brand-Hero-EN_exact&adgroup=qatar+airways&term=qatar+airways&&&&&gad_source=1&gclid=CjwKCAiA1-6sBhAoEiwArqlGPjRmTzEZSpVAasFn6RgO6TZfwLX-nZgMD0UUfANy4gZMwKkV4np4-BoCcEEQAvD_BwE&gclsrc=aw.ds"
+                  target="_blank"
+                  class="btn btn-info d-block"
+                  >BUY TICKETS</a
+                >
+              </div>
+            </div>
           </div>
-
-          <div class="col-lg-4 justify-content-evenly mb-5">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d885096.9195072479!2d34.708139034184754!3d29.938887871443765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x15006f47adc6e083%3A0x436bd9e1e7d5f9e6!2sKing%20Hussein%20International%20Airport%2C%20Airport%20St%2C%20Aqaba%2C%20Jordan!3m2!1d29.6090989!2d35.020793399999995!4m5!1s0x15016ef1703b6071%3A0x199bf908679a2291!2sPetra%2C%20Jordan!3m2!1d30.3284544!2d35.4443622!5e0!3m2!1sen!2sus!4v1704756788640!5m2!1sen!2sus"
-              class="card-img-top"
-              height="74.2%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-
-            <h4>DRIVE</h4>
-            <p class="text-center">Rent a car or aquire a private transfer</p>
-            <a
-              href="https://www.viator.com/Jordan-tours/Private-Drivers/d744-g15-c32762"
-              target="_blank"
-              class="btn btn-info d-block"
-              >PRIVATE TRANSFER</a
-            >
+          <div class="col-lg-3 align-self-center">
+            <div class="card" style="width: 28rem">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d885096.9195072479!2d34.708139034184754!3d29.938887871443765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x15006f47adc6e083%3A0x436bd9e1e7d5f9e6!2sKing%20Hussein%20International%20Airport%2C%20Airport%20St%2C%20Aqaba%2C%20Jordan!3m2!1d29.6090989!2d35.020793399999995!4m5!1s0x15016ef1703b6071%3A0x199bf908679a2291!2sPetra%2C%20Jordan!3m2!1d30.3284544!2d35.4443622!5e0!3m2!1sen!2sus!4v1704756788640!5m2!1sen!2sus"
+                height="300"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+              <div class="card-body">
+                <h4 class="card-title text-center">DRIVE</h4>
+                <p class="card-text text-center">
+                  Rent a car or aquire a private transfer
+                </p>
+                <a
+                  href="https://www.viator.com/Jordan-tours/Private-Drivers/d744-g15-c32762"
+                  target="_blank"
+                  class="btn btn-info d-block"
+                  >PRIVATE TRANSFER</a
+                >
+              </div>
+            </div>
           </div>
-
-          <div class="col-lg-4 justify-content-evenly mb-5">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/794/original/petra-siq.jpg?1704757330"
-              class="card-img-top"
-              alt="..."
-            />
-
-            <h4 class="mt-1">WALK</h4>
-            <p class="text-center">
-              Walk the Siq Trail or take a camel, horse, or mule ride
-            </p>
-            <a
-              href="https://www.visitpetra.jo/Pages/viewpage.aspx?pageID=154"
-              class="btn btn-info d-block"
-              target="_blank"
-              >READ THESE TIPS</a
-            >
+          <div class="col-lg-3 align-self-center">
+            <div class="card" style="width: 28rem">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/794/original/petra-siq.jpg?1704757330"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h4 class="card-title text-center">WALK</h4>
+                <p class="card-text text-center">Walk the Siq Trail</p>
+                <a
+                  href="https://www.visitpetra.jo/Pages/viewpage.aspx?pageID=154"
+                  class="btn btn-info d-block"
+                  target="_blank"
+                  >READ THESE TIPS</a
+                >
+              </div>
+            </div>
           </div>
         </div>
         <h2 data-aos="fade-down">Virtual Tour</h2>
@@ -446,8 +441,7 @@
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-          data-aos="fade-left"
+          allowfullscreen data-aos="fade-left"
         ></iframe>
         <h3 data-aos="fade-left">
           💁🏽‍♀️ After admiring Al-Khazneh temple don't miss these
@@ -460,12 +454,10 @@
       </section>
       <section class="tours-section" id="tours">
         <h2 data-aos="fade-down">Book Tours and Tickets</h2>
-        <h5 data-aos="fade-up">
-          Explore Al-Khazneh Temple with knowledgable guides
-        </h5>
+        <h5 data-aos="fade-up">Explore Al-Khazneh Temple with knowledgable guides</h5>
         <div class="tours-img-container">
           <div class="row g-2">
-            <div class="col-md-6" data-aos="fade-right">
+            <div class="col-6" data-aos="fade-right">
               <div class="p-3">
                 <a
                   href="https://www.viator.com/tours/Aqaba/Private-Tour-Petra-Day-Trip-from-Aqaba/d4392-2268ZTT01ADT"
@@ -477,7 +469,7 @@
                 /></a>
               </div>
             </div>
-            <div class="col-md-6" data-aos="fade-left">
+            <div class="col-6" data-aos="fade-left">
               <div class="p-3">
                 <a
                   href="https://www.viator.com/tours/Aqaba/Aqaba-Shore-Excursion-Private-Petra-Sightseeing-Tour/d4392-8258P1"
@@ -489,10 +481,10 @@
                 /></a>
               </div>
             </div>
-            <div class="col-md-6" data-aos="fade-right">
+            <div class="col-6" data-aos="fade-right">
               <div class="p-3">
                 <a
-                  href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/110/068/original/petra-tour3.png?1704921090"
+                  href="https://www.viator.com/tours/Petra/Petra-and-Wadi-Rum-in-one-day/d24520-207152P5"
                   target="_blank"
                   ><img
                     src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/866/original/petra-tour4.png?1704819771"
@@ -501,7 +493,7 @@
                 /></a>
               </div>
             </div>
-            <div class="col-md-6" data-aos="fade-left">
+            <div class="col-6" data-aos="fade-left">
               <div class="p-3">
                 <a
                   href="https://www.viator.com/tours/Amman/Private-Tour-Petra-Day-Trip-from-Amman/d5503-2268ZT005"
@@ -533,6 +525,7 @@
     </main>
 
     <footer class="text-center">
+      <button id="backToTopBtn" title="Back to Top">🔝</button>
       <p>
         This project was coded by
         <a href="https://dcasacodez.netlify.app" target="_blank"
@@ -553,6 +546,32 @@
         >.
       </p>
     </footer>
+
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const body = document.body;
+
+      themeToggle.addEventListener("change", () => {
+        body.classList.toggle("dark-theme");
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var backToTopBtn = document.getElementById("backToTopBtn");
+        window.addEventListener("scroll", function () {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            backToTopBtn.style.display = "block";
+          } else {
+            backToTopBtn.style.display = "none";
+          }
+        });
+        backToTopBtn.addEventListener("click", function () {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
+      });
 
       AOS.init({
         duration: 1000,
