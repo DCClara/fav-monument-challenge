@@ -124,7 +124,6 @@
     header {
       text-align: center;
       color: white;
-      width: 100%;
       height: 100vh;
       margin: 0 auto;
       padding: 200px 0;
@@ -132,8 +131,12 @@
         url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/648/original/petra-hero-img.jpg?1704660054")
           no-repeat bottom / cover;
     }
-    h1, h2, h3, h4, h5 {
-        text-align: center;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      text-align: center;
     }
     h2 {
       font-size: 40px;
@@ -141,7 +144,7 @@
       letter-spacing: 4px;
     }
     h3 {
-        margin: 150px 0;
+      margin: 150px 0;
     }
     h5 {
       margin-bottom: 100px;
@@ -170,9 +173,6 @@
       line-height: 1.6;
       text-indent: 30px;
     }
-    section {
-      padding: 100px;
-    }
     section a {
       text-decoration: none;
       color: #0acaf0;
@@ -181,14 +181,9 @@
       transform: scale(1.2);
       transition: all 100ms ease-in-out;
     }
-    iframe {
-      aspect-ratio: 16/9;
-      width: 100%;
-      margin: 0 auto;
-    }
-    footer {
+    footer p {
       background: #9a7a7d;
-
+      font-size: 14px;
       padding: 50px 0;
     }
     footer a {
@@ -200,6 +195,15 @@
     }
     .travel-section .row {
       margin: 150px 0;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+    }
+    .responsive-iframe {
+      width: 100%;
+  overflow: hidden;
+      aspect-ratio: 16 / 9;
     }
     .card-body p {
       font-size: 16px;
@@ -243,6 +247,7 @@
     }
   </style>
   <body>
+    <div class="container">
     <nav>
       <div class="icon">🇯🇴</div>
       <a href="#home">Home</a>
@@ -273,7 +278,7 @@
         </h2>
         <h5 data-aos="fade-left">Petra and the Nabataeans</h5>
         <div class="row d-flex justify-content-evenly">
-          <div class="col-lg-6 align-self-center" data-aos="fade-up">
+          <div class="col-xlg-6 align-self-center" data-aos="fade-up">
             <p>
               Let me tell you about one of the coolest historical sites you'll
               ever come across - Al Khazneh! Also known as the Treasury of
@@ -302,7 +307,7 @@
               story.
             </p>
           </div>
-          <div class="col-lg-5 align-self-center" data-aos="fade-left">
+          <div class="col-xlg-5 align-self-center" data-aos="fade-left">
             <img
               class="img-fluid"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/752/original/nabataean-map.png?1704738631"
@@ -312,7 +317,7 @@
           </div>
         </div>
         <div class="row d-flex justify-content-evenly">
-          <div class="col-lg-5 align-self-center" data-aos="fade-right">
+          <div class="col-xlg-5 align-self-center" data-aos="fade-right">
             <img
               class="img-fluid rounded"
               src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/779/original/petra-details.jpeg?1704743333"
@@ -323,7 +328,7 @@
               rock-cut tombs in Petra
             </h6>
           </div>
-          <div class="col-lg-5 align-self-center" data-aos="fade-up">
+          <div class="col-xlg-5 align-self-center" data-aos="fade-up">
             <p>
               Al Khazneh is an outstanding example of the exquisite
               craftsmanship of the
@@ -366,7 +371,7 @@
           walls, and the rough texture of the carved stone.
         </p>
         <div class="row d-flex justify-content-evenly" data-aos="fade-up">
-          <div class="col-lg-3 align-self-center">
+          <div class="col-xlg-3 align-self-center">
             <div class="card" style="width: 28rem">
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/792/original/petra-airport.jpg?1704755422"
@@ -387,7 +392,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 align-self-center">
+          <div class="col-xlg-3 align-self-center">
             <div class="card" style="width: 28rem">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d885096.9195072479!2d34.708139034184754!3d29.938887871443765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x15006f47adc6e083%3A0x436bd9e1e7d5f9e6!2sKing%20Hussein%20International%20Airport%2C%20Airport%20St%2C%20Aqaba%2C%20Jordan!3m2!1d29.6090989!2d35.020793399999995!4m5!1s0x15016ef1703b6071%3A0x199bf908679a2291!2sPetra%2C%20Jordan!3m2!1d30.3284544!2d35.4443622!5e0!3m2!1sen!2sus!4v1704756788640!5m2!1sen!2sus"
@@ -411,7 +416,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-3 align-self-center">
+          <div class="col-xlg-3 align-self-center">
             <div class="card" style="width: 28rem">
               <img
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/794/original/petra-siq.jpg?1704757330"
@@ -436,13 +441,17 @@
           A sneak peek of what it's like to walk the Siq trail to The Al Khazneh
           Temple
         </h5>
-        <iframe
-          src="https://www.youtube.com/embed/fpO--cFszts?si=wT7a6tZ_QIDJDe6W"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen data-aos="fade-left"
-        ></iframe>
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/fpO--cFszts?si=wT7a6tZ_QIDJDe6W"
+            class="responsive-iframe"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            data-aos="fade-left"
+          ></iframe>
+        </div>
         <h3 data-aos="fade-left">
           💁🏽‍♀️ After admiring Al-Khazneh temple don't miss these
           <a
@@ -454,7 +463,9 @@
       </section>
       <section class="tours-section" id="tours">
         <h2 data-aos="fade-down">Book Tours and Tickets</h2>
-        <h5 data-aos="fade-up">Explore Al-Khazneh Temple with knowledgable guides</h5>
+        <h5 data-aos="fade-up">
+          Explore Al-Khazneh Temple with knowledgable guides
+        </h5>
         <div class="tours-img-container">
           <div class="row g-2">
             <div class="col-6" data-aos="fade-right">
@@ -546,7 +557,7 @@
         >.
       </p>
     </footer>
-
+</div>
     <script>
       const themeToggle = document.getElementById("themeToggle");
       const body = document.body;
