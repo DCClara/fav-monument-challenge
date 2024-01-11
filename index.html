@@ -26,20 +26,16 @@
   </head>
   <style>
     body {
-      margin: 0;
+      margin: 0 auto;
       font-family: "Poppins", sans-serif;
       background-color: #000;
       color: #fff;
     }
-    body.dark-theme {
+      body.dark-theme {
       color: #000;
       background-color: #fff;
     }
-    body.dark-theme #about,
-    body.dark-theme #tours {
-      background-color: hsl(45, 100%, 96%);
-    }
-    nav {
+     nav {
       overflow: hidden;
       background-color: #9a7a7d;
       position: sticky;
@@ -144,7 +140,7 @@
       letter-spacing: 4px;
     }
     h3 {
-      margin: 150px 0;
+      margin: 150px 0 100px;
     }
     h5 {
       margin-bottom: 100px;
@@ -173,7 +169,10 @@
       line-height: 1.6;
       text-indent: 30px;
     }
-    section a {
+      section {
+    margin-top: 50px;
+   }
+    a {
       text-decoration: none;
       color: #0acaf0;
     }
@@ -186,28 +185,41 @@
       font-size: 14px;
       padding: 50px 0;
     }
-    footer a {
-      text-decoration: none;
-      color: #0acaf0;
-    }
-    .about-section .row {
-      margin-bottom: 100px;
-    }
-    .travel-section .row {
-      margin: 150px 0;
-    }
+   
     .video-container {
       display: flex;
       justify-content: center;
     }
-    .responsive-iframe {
+    .embed {
       width: 100%;
-  overflow: hidden;
+      aspect-ratio: 1 /1;
+    }
+    .responsive-iframe {
+      display: block;
+      width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
       aspect-ratio: 16 / 9;
+    }
+    .grid {
+      display: grid;
+      grid-gap: 30px;
+      margin: 50px 0 100px;
+    }
+    .img-responsive {
+      width: 100%;
+      display: block;
+    }
+    .grid-3-columns {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .card-header.grid {
+      grid-gap: 0;
     }
     .card-body p {
       font-size: 16px;
       text-indent: 0;
+      padding: 30px;
     }
     #backToTopBtn {
       display: none;
@@ -227,10 +239,10 @@
       opacity: 1;
     }
 
-    @media screen and (min-width: 1024px) {
+    /* @media screen and (min-width: 1024px) {
     }
     @media screen and (min-width: 767px) and (max-width: 1023px) {
-    }
+    } */
     @media screen and (max-width: 767px) {
       nav a,
       .navbar-right {
@@ -247,140 +259,145 @@
     }
   </style>
   <body>
-    <div class="container">
     <nav>
-      <div class="icon">🇯🇴</div>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#travel">Travel</a>
-      <a href="#tours">Tours</a>
-      <div class="navbar-right">
-        <div class="toggle-container">
-          <label class="toggle-switch">
-            <input type="checkbox" id="themeToggle" />
-            <span class="slider"></span>
-          </label>
-          <span class="toggle-label">☀️</span>
-        </div>
-      </div>
-    </nav>
-    <header id="home">
-      <div class="hero">
-        <h5 data-aos="fade-down">The Treasury of Petra, Jordan</h5>
-        <h1 data-aos="fade-left">Al-Khazneh Temple</h1>
-        <h3 data-aos="fade-up">One Of The 7 Wonders Of The World</h3>
-      </div>
-    </header>
-    <main>
-      <section class="about-section" id="about">
-        <h2 data-aos="fade-down">
-          Jordan's ancient temple, Al Khazneh (The Treasury)
-        </h2>
-        <h5 data-aos="fade-left">Petra and the Nabataeans</h5>
-        <div class="row d-flex justify-content-evenly">
-          <div class="col-xlg-6 align-self-center" data-aos="fade-up">
-            <p>
-              Let me tell you about one of the coolest historical sites you'll
-              ever come across - Al Khazneh! Also known as the Treasury of
-              Petra. It's nestled in the rugged landscapes of the Petra
-              Archaeological Park in Jordan, and it looks like something
-              straight out of a movie.
-            </p>
-
-            <p>
-              This awesome facade was carved around 2,000 years ago by the
-              Nabataean people from vibrant red cliffs. Originally intended as a
-              mausoleum for the Nabatean King
-              <a
-                class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="https://en.wikipedia.org/wiki/Aretas_IV_Philopatris"
-                target="_blank"
-                >Aretas IV</a
-              >, it eventually transformed into a sacred space for worship.
-            </p>
-
-            <p>
-              But here's the kicker - in the 19th century, local Bedouins saw
-              the majestic structure and thought it must hide a hidden treasure.
-              So, they started calling it the Treasury! Who knows if there's
-              actually any treasure in there, but it sure makes for a great
-              story.
-            </p>
-          </div>
-          <div class="col-xlg-5 align-self-center" data-aos="fade-left">
-            <img
-              class="img-fluid"
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/752/original/nabataean-map.png?1704738631"
-              alt="Nabataean map"
-            />
-            <h6 class="mt-1 text-end">A map of the Nabataean Kingdom</h6>
+        <div class="icon">🇯🇴</div>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#travel">Travel</a>
+        <a href="#tours">Tours</a>
+        <div class="navbar-right">
+          <div class="toggle-container">
+            <label class="toggle-switch">
+              <input type="checkbox" id="themeToggle" />
+              <span class="slider"></span>
+            </label>
+            <span class="toggle-label">☀️</span>
           </div>
         </div>
-        <div class="row d-flex justify-content-evenly">
-          <div class="col-xlg-5 align-self-center" data-aos="fade-right">
-            <img
-              class="img-fluid rounded"
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/779/original/petra-details.jpeg?1704743333"
-              alt="Nabataean map"
-            />
-            <h6 class="mt-1">
-              The fine details of the temple are some of the most elaborate
-              rock-cut tombs in Petra
-            </h6>
-          </div>
-          <div class="col-xlg-5 align-self-center" data-aos="fade-up">
-            <p>
-              Al Khazneh is an outstanding example of the exquisite
-              craftsmanship of the
-              <a
-                class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-                href="https://en.wikipedia.org/wiki/Nabataeans"
-                target="_blank"
-                >Nabataean civilization</a
-              >. Among all the astonishing structures carved into the cliffs by
-              the Nabataeans, the Treasury stands out due to its impressive
-              ancient engineering. It also features influences from Greek and
-              Roman architectural styles, further adding to its remarkable
-              appeal. Do you also admire this magnificent structure?
-            </p>
-          </div>
+      </nav>
+      <header id="home">
+        <div class="hero">
+          <h5 data-aos="fade-down">The Treasury of Petra, Jordan</h5>
+          <h1 data-aos="fade-left">Al-Khazneh Temple</h1>
+          <h3 data-aos="fade-up">One Of The 7 Wonders Of The World</h3>
         </div>
-        <h3 data-aos="fade-left">
-          👉🏼 To learn more about Al-Khazneh, read it here on
-          <a
-            class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-            href="https://en.wikipedia.org/wiki/Al-Khazneh"
-            target="_blank"
-            >Wikipedia</a
-          >
-          📖
-        </h3>
-      </section>
-      <section class="travel-section" id="travel">
-        <h2 data-aos="fade-down">Travel to Jordan and visit Al Khazneh</h2>
-        <h5 data-aos="fade-up">
-          Experience the incrediable architecture and history
-        </h5>
-        <p data-aos="fade-right">
-          Visiting Petra is an experience that engages all your senses. You can
-          hear the sounds of the bustling city, the calls of the vendors selling
-          spices and souvenirs, and the echoes of footsteps on the stone paths.
-          You can smell the fragrant spices in the air, the incense burning in
-          the temples, and the dust kicked up by the camels. You can feel the
-          sun beating down on the red cliffs, the coolness of the shaded canyon
-          walls, and the rough texture of the carved stone.
-        </p>
-        <div class="row d-flex justify-content-evenly" data-aos="fade-up">
-          <div class="col-xlg-3 align-self-center">
-            <div class="card" style="width: 28rem">
+      </header>
+      <div class="container">
+      <main>
+        <section class="about-section" id="about">
+          <h2 data-aos="fade-down">
+            Jordan's Ancient Temple, Al Khazneh (The Treasury)
+          </h2>
+          <h5 data-aos="fade-left">Petra and the Nabataeans</h5>
+          <div class="row d-flex justify-content-evenly">
+            <div class="col-lg-6 align-self-center" data-aos="fade-up">
+              <p>
+                Let me tell you about one of the coolest historical sites you'll
+                ever come across - Al Khazneh! Also known as the Treasury of
+                Petra. It's nestled in the rugged landscapes of the Petra
+                Archaeological Park in Jordan, and it looks like something
+                straight out of a movie.
+              </p>
+              
+            </div>
+            <div class="col-lg-5 align-self-center" data-aos="fade-left">
               <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/792/original/petra-airport.jpg?1704755422"
-                class="card-img-top"
-                alt="..."
+                class="img-fluid rounded"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/752/original/nabataean-map.png?1704738631"
+                alt="Nabataean map"
               />
+              <h6 class="mt-1 text-end">A map of the Nabataean Kingdom</h6>
+            </div>
+          </div>
+          <div class="row d-flex justify-content-evenly">
+            <div class="col-lg-6">
+          <p class="pt-5 pb-5">
+                This awesome facade was carved around 2,000 years ago by the
+                Nabataean people from vibrant red cliffs. Originally intended as
+                a mausoleum for the Nabatean King
+                <a
+                  class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href="https://en.wikipedia.org/wiki/Aretas_IV_Philopatris"
+                  target="_blank"
+                  >Aretas IV</a
+                >, it eventually transformed into a sacred space for worship.
+              </p></div>
+              <div class="col-lg-6">
+            <p class="pt-5">
+                But here's the kicker - in the 19th century, local Bedouins saw
+                the majestic structure and thought it must hide a hidden
+                treasure. So, they started calling it the Treasury! Who knows if
+                there's actually any treasure in there, but it sure makes for a
+                great story.
+              </p></div></div>
+          <div class="row d-flex justify-content-evenly">
+            <div class="col-lg-5 align-self-center" data-aos="fade-right">
+              <img
+                class="img-fluid rounded"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/779/original/petra-details.jpeg?1704743333"
+                alt="Nabataean map"
+              />
+              <h6 class="mt-1">
+                The fine details of the temple are some of the most elaborate
+                rock-cut tombs in Petra
+              </h6>
+            </div>
+            <div class="col-lg-6 align-self-center" data-aos="fade-up">
+              <p>
+                Al Khazneh is an outstanding example of the exquisite
+                craftsmanship of the
+                <a
+                  class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+                  href="https://en.wikipedia.org/wiki/Nabataeans"
+                  target="_blank"
+                  >Nabataean civilization</a
+                >. Among all the astonishing structures carved into the cliffs
+                by the Nabataeans, the Treasury stands out due to its impressive
+                ancient engineering. It also features influences from Greek and
+                Roman architectural styles, further adding to its remarkable
+                appeal. Do you also admire this magnificent structure?
+              </p>
+            </div>
+          </div>
+          <h3 data-aos="fade-left">
+            👉🏼 To learn more about Al-Khazneh, read it here on
+            <a
+              class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
+              href="https://en.wikipedia.org/wiki/Al-Khazneh"
+              target="_blank"
+              >Wikipedia</a
+            >
+            📖
+          </h3>
+          <hr>
+        </section>
+        <section class="travel-section" id="travel">
+          <h2 data-aos="fade-down">Travel to Jordan and visit Al Khazneh</h2>
+          <h5 data-aos="fade-up">
+            Experience the incrediable architecture and history
+          </h5>
+          <p data-aos="fade-right">
+            Visiting Petra is an experience that engages all your senses. You
+            can hear the sounds of the bustling city, the calls of the vendors
+            selling spices and souvenirs, and the echoes of footsteps on the
+            stone paths. You can smell the fragrant spices in the air, the
+            incense burning in the temples, and the dust kicked up by the
+            camels. You can feel the sun beating down on the red cliffs, the
+            coolness of the shaded canyon walls, and the rough texture of the
+            carved stone.
+          </p>
+          <div class="grid grid-3-columns">
+            <div class="card">
+              <div class="card-header grid grid-2-columns">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/792/original/petra-airport.jpg?1704755422"
+                  class="img-responsive"
+                  alt="..."
+                />
+              </div>
               <div class="card-body">
-                <h4 class="card-title text-center">FLY</h4>
-                <p class="card-text text-center">
+                <h4 class="text-center">FLY</h4>
+                <p class="text-center">
                   (AQJ) King Hussein International Airport
                 </p>
                 <a
@@ -391,20 +408,20 @@
                 >
               </div>
             </div>
-          </div>
-          <div class="col-xlg-3 align-self-center">
-            <div class="card" style="width: 28rem">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d885096.9195072479!2d34.708139034184754!3d29.938887871443765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x15006f47adc6e083%3A0x436bd9e1e7d5f9e6!2sKing%20Hussein%20International%20Airport%2C%20Airport%20St%2C%20Aqaba%2C%20Jordan!3m2!1d29.6090989!2d35.020793399999995!4m5!1s0x15016ef1703b6071%3A0x199bf908679a2291!2sPetra%2C%20Jordan!3m2!1d30.3284544!2d35.4443622!5e0!3m2!1sen!2sus!4v1704756788640!5m2!1sen!2sus"
-                height="300"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+            <div class="card">
+              <div class="card-header grid grid-2-columns">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d885096.9195072479!2d34.708139034184754!3d29.938887871443765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x15006f47adc6e083%3A0x436bd9e1e7d5f9e6!2sKing%20Hussein%20International%20Airport%2C%20Airport%20St%2C%20Aqaba%2C%20Jordan!3m2!1d29.6090989!2d35.020793399999995!4m5!1s0x15016ef1703b6071%3A0x199bf908679a2291!2sPetra%2C%20Jordan!3m2!1d30.3284544!2d35.4443622!5e0!3m2!1sen!2sus!4v1704756788640!5m2!1sen!2sus"
+                  class="embed"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
               <div class="card-body">
-                <h4 class="card-title text-center">DRIVE</h4>
-                <p class="card-text text-center">
+                <h4 class="text-center">DRIVE</h4>
+                <p class="text-center">
                   Rent a car or aquire a private transfer
                 </p>
                 <a
@@ -415,17 +432,17 @@
                 >
               </div>
             </div>
-          </div>
-          <div class="col-xlg-3 align-self-center">
-            <div class="card" style="width: 28rem">
-              <img
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/794/original/petra-siq.jpg?1704757330"
-                class="card-img-top"
-                alt="..."
-              />
+            <div class="card">
+              <div class="card-header grid grid-2-columns">
+                <img
+                  src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/794/original/petra-siq.jpg?1704757330"
+                  class="card-img-top"
+                  alt="..."
+                />
+              </div>
               <div class="card-body">
-                <h4 class="card-title text-center">WALK</h4>
-                <p class="card-text text-center">Walk the Siq Trail</p>
+                <h4 class="text-center">WALK</h4>
+                <p class="text-center">Walk the Siq Trail</p>
                 <a
                   href="https://www.visitpetra.jo/Pages/viewpage.aspx?pageID=154"
                   class="btn btn-info d-block"
@@ -435,129 +452,132 @@
               </div>
             </div>
           </div>
-        </div>
-        <h2 data-aos="fade-down">Virtual Tour</h2>
-        <h5 data-aos="fade-up">
-          A sneak peek of what it's like to walk the Siq trail to The Al Khazneh
-          Temple
-        </h5>
-        <div class="video-container">
-          <iframe
-            src="https://www.youtube.com/embed/fpO--cFszts?si=wT7a6tZ_QIDJDe6W"
-            class="responsive-iframe"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-            data-aos="fade-left"
-          ></iframe>
-        </div>
-        <h3 data-aos="fade-left">
-          💁🏽‍♀️ After admiring Al-Khazneh temple don't miss these
-          <a
-            href="https://www.google.com/search?q=SITES+IN+PETRA&sca_esv=596692341&biw=1280&bih=639&ei=RI6cZa-oPKiVwbkPt7qPiAQ&ved=0ahUKEwiv2vDOgc-DAxWoSjABHTfdA0EQ4dUDCBA&uact=5&oq=SITES+IN+PETRA&gs_lp=Egxnd3Mtd2l6LXNlcnAiDlNJVEVTIElOIFBFVFJBMgUQABiABDIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjILEAAYgAQYigUYhgMyCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgNI4B9QjwpYgx1wAXgBkAEAmAGRAaABtwuqAQM3Lje4AQPIAQD4AQGoAgrCAhMQABiABBiKBRhDGOoCGLQC2AEBwgIWEAAYAxiPARjlAhjqAhi0AhiMA9gBAsICFhAuGAMYjwEY5QIY6gIYtAIYjAPYAQLCAhAQLhiABBiKBRhDGMcBGNEDwgILEC4YxwEY0QMYgATCAhEQLhiDARjHARixAxjRAxiABMICERAuGIAEGLEDGIMBGMcBGNEDwgIOEC4YgAQYigUYsQMYgwHCAgsQABiABBixAxiDAcICHxAuGIAEGIoFGEMYxwEY0QMYlwUY3AQY3gQY4ATYAQPCAgsQABiABBiKBRiRAsICChAAGIAEGIoFGEPCAhAQLhiABBiKBRhDGLEDGIMBwgIKEC4YgAQYigUYQ8ICCxAuGIAEGMcBGNEDwgILEC4YgAQYsQMYgwHCAggQABiABBixA8ICDhAAGIAEGIoFGLEDGIMBwgIOEC4YxwEYsQMY0QMYgATCAg4QLhiABBjHARivARiOBcICBRAuGIAEwgIIEAAYFhgeGArCAggQABgWGB4YD-IDBBgAIEGIBgG6BgQIARgHugYECAIYCroGBggDEAEYFA&sclient=gws-wiz-serp"
-            target="_blank"
-            >Top sights in Petra</a
-          >
-        </h3>
-      </section>
-      <section class="tours-section" id="tours">
-        <h2 data-aos="fade-down">Book Tours and Tickets</h2>
-        <h5 data-aos="fade-up">
-          Explore Al-Khazneh Temple with knowledgable guides
-        </h5>
-        <div class="tours-img-container">
-          <div class="row g-2">
-            <div class="col-6" data-aos="fade-right">
-              <div class="p-3">
-                <a
-                  href="https://www.viator.com/tours/Aqaba/Private-Tour-Petra-Day-Trip-from-Aqaba/d4392-2268ZTT01ADT"
-                  target="_blank"
-                  ><img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/859/original/petra-tour1.png?1704816323"
-                    class="img-fluid rounded"
-                    alt=""
-                /></a>
+          <hr>
+          <section>
+          <h2 data-aos="fade-down">Virtual Tour</h2>
+          <h5 data-aos="fade-up">
+            A sneak peek of what it's like to walk the Siq trail to The Al
+            Khazneh Temple
+          </h5>
+          <div class="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/fpO--cFszts?si=wT7a6tZ_QIDJDe6W"
+              class="responsive-iframe"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              data-aos="fade-left"
+            ></iframe>
+          </div>
+          <h3 data-aos="fade-left">
+            💁🏽‍♀️ After admiring Al-Khazneh temple don't miss these
+            <a
+              href="https://www.google.com/search?q=SITES+IN+PETRA&sca_esv=596692341&biw=1280&bih=639&ei=RI6cZa-oPKiVwbkPt7qPiAQ&ved=0ahUKEwiv2vDOgc-DAxWoSjABHTfdA0EQ4dUDCBA&uact=5&oq=SITES+IN+PETRA&gs_lp=Egxnd3Mtd2l6LXNlcnAiDlNJVEVTIElOIFBFVFJBMgUQABiABDIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHjILEAAYgAQYigUYhgMyCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgNI4B9QjwpYgx1wAXgBkAEAmAGRAaABtwuqAQM3Lje4AQPIAQD4AQGoAgrCAhMQABiABBiKBRhDGOoCGLQC2AEBwgIWEAAYAxiPARjlAhjqAhi0AhiMA9gBAsICFhAuGAMYjwEY5QIY6gIYtAIYjAPYAQLCAhAQLhiABBiKBRhDGMcBGNEDwgILEC4YxwEY0QMYgATCAhEQLhiDARjHARixAxjRAxiABMICERAuGIAEGLEDGIMBGMcBGNEDwgIOEC4YgAQYigUYsQMYgwHCAgsQABiABBixAxiDAcICHxAuGIAEGIoFGEMYxwEY0QMYlwUY3AQY3gQY4ATYAQPCAgsQABiABBiKBRiRAsICChAAGIAEGIoFGEPCAhAQLhiABBiKBRhDGLEDGIMBwgIKEC4YgAQYigUYQ8ICCxAuGIAEGMcBGNEDwgILEC4YgAQYsQMYgwHCAggQABiABBixA8ICDhAAGIAEGIoFGLEDGIMBwgIOEC4YxwEYsQMY0QMYgATCAg4QLhiABBjHARivARiOBcICBRAuGIAEwgIIEAAYFhgeGArCAggQABgWGB4YD-IDBBgAIEGIBgG6BgQIARgHugYECAIYCroGBggDEAEYFA&sclient=gws-wiz-serp"
+              target="_blank"
+              >Top sights in Petra</a
+            >
+          </h3>
+          <hr>
+          </section>
+        </section>
+        <section class="tours-section" id="tours">
+          <h2 data-aos="fade-down">Book Tours and Tickets</h2>
+          <h5 data-aos="fade-up">
+            Explore Al-Khazneh Temple with knowledgable guides
+          </h5>
+          <div class="tours-img-container">
+            <div class="row g-2">
+              <div class="col-6" data-aos="fade-right">
+                <div class="p-3">
+                  <a
+                    href="https://www.viator.com/tours/Aqaba/Private-Tour-Petra-Day-Trip-from-Aqaba/d4392-2268ZTT01ADT"
+                    target="_blank"
+                    ><img
+                      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/859/original/petra-tour1.png?1704816323"
+                      class="img-fluid rounded"
+                      alt=""
+                  /></a>
+                </div>
               </div>
-            </div>
-            <div class="col-6" data-aos="fade-left">
-              <div class="p-3">
-                <a
-                  href="https://www.viator.com/tours/Aqaba/Aqaba-Shore-Excursion-Private-Petra-Sightseeing-Tour/d4392-8258P1"
-                  target="_blank"
-                  ><img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/861/original/petra-tour3.png?1704816342"
-                    class="img-fluid rounded"
-                    alt=""
-                /></a>
+              <div class="col-6" data-aos="fade-left">
+                <div class="p-3">
+                  <a
+                    href="https://www.viator.com/tours/Aqaba/Aqaba-Shore-Excursion-Private-Petra-Sightseeing-Tour/d4392-8258P1"
+                    target="_blank"
+                    ><img
+                      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/861/original/petra-tour3.png?1704816342"
+                      class="img-fluid rounded"
+                      alt=""
+                  /></a>
+                </div>
               </div>
-            </div>
-            <div class="col-6" data-aos="fade-right">
-              <div class="p-3">
-                <a
-                  href="https://www.viator.com/tours/Petra/Petra-and-Wadi-Rum-in-one-day/d24520-207152P5"
-                  target="_blank"
-                  ><img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/866/original/petra-tour4.png?1704819771"
-                    class="img-fluid rounded"
-                    alt=""
-                /></a>
+              <div class="col-6" data-aos="fade-right">
+                <div class="p-3">
+                  <a
+                    href="https://www.viator.com/tours/Petra/Petra-and-Wadi-Rum-in-one-day/d24520-207152P5"
+                    target="_blank"
+                    ><img
+                      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/866/original/petra-tour4.png?1704819771"
+                      class="img-fluid rounded"
+                      alt=""
+                  /></a>
+                </div>
               </div>
-            </div>
-            <div class="col-6" data-aos="fade-left">
-              <div class="p-3">
-                <a
-                  href="https://www.viator.com/tours/Amman/Private-Tour-Petra-Day-Trip-from-Amman/d5503-2268ZT005"
-                  target="_blank"
-                  ><img
-                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/864/original/petra-tour2.png?1704819446"
-                    class="img-fluid rounded"
-                    alt=""
-                /></a>
+              <div class="col-6" data-aos="fade-left">
+                <div class="p-3">
+                  <a
+                    href="https://www.viator.com/tours/Amman/Private-Tour-Petra-Day-Trip-from-Amman/d5503-2268ZT005"
+                    target="_blank"
+                    ><img
+                      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/864/original/petra-tour2.png?1704819446"
+                      class="img-fluid rounded"
+                      alt=""
+                  /></a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <h3 data-aos="fade-up">
-          <a
-            href="https://www.viator.com/Petra-attractions/The-Treasury-Al-Khazneh/d24520-a13351"
-            target="_blank"
-            >✨ To see a complete list of tours with
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/867/original/viator-icon.png?1704820150"
-              class="img-fluid rounded"
-              width="100px"
-              alt=""
-            />
-            click here!</a
+          <h3 data-aos="fade-up">
+            <a
+              href="https://www.viator.com/Petra-attractions/The-Treasury-Al-Khazneh/d24520-a13351"
+              target="_blank"
+              >✨ To see a complete list of tours with
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/867/original/viator-icon.png?1704820150"
+                class="img-fluid rounded"
+                width="100px"
+                alt=""
+              />
+              click here!</a
+            >
+          </h3>
+        </section>
+      </main>
+      </div>
+      <footer class="text-center">
+        <button id="backToTopBtn" title="Back to Top">🔝</button>
+        <p>
+          This project was coded by
+          <a href="https://dcasacodez.netlify.app" target="_blank"
+            >Danielle Casa</a
           >
-        </h3>
-      </section>
-    </main>
-
-    <footer class="text-center">
-      <button id="backToTopBtn" title="Back to Top">🔝</button>
-      <p>
-        This project was coded by
-        <a href="https://dcasacodez.netlify.app" target="_blank"
-          >Danielle Casa</a
-        >
-        for the
-        <a
-          href="https://www.shecodes.io/contests/your-favorite-monument"
-          target="_blank"
-          >SheCodes.io Favorite Monument challenge</a
-        >
-        and is
-        <a
-          href="https://github.com/DCClara/fav-monument-challenge"
-          target="_blank"
-        >
-          open-sourced on GitHub</a
-        >.
-      </p>
-    </footer>
-</div>
+          for the
+          <a
+            href="https://www.shecodes.io/contests/your-favorite-monument"
+            target="_blank"
+            >SheCodes.io Favorite Monument challenge</a
+          >
+          and is
+          <a
+            href="https://github.com/DCClara/fav-monument-challenge"
+            target="_blank"
+          >
+            open-sourced on GitHub</a
+          >.
+        </p>
+      </footer>
+    
     <script>
       const themeToggle = document.getElementById("themeToggle");
       const body = document.body;
