@@ -36,9 +36,6 @@
     }
     nav {
       background-color: #9a7a7d;
-      position: sticky;
-      top: 0;
-      z-index: 100;
     }
     nav a {
       color: #000;
@@ -52,8 +49,8 @@
     }
     nav .icon {
       font-size: 24px;
-      margin-left: 8px;
-      cursor: pointer;
+      margin-left: 10px;
+      padding-right: 10px;
     }
 
     nav .navbar-toggler {
@@ -114,7 +111,7 @@
       text-align: center;
       color: white;
       height: 90vh;
-      padding: 50px 0;
+      padding-top: 200px;
       background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
         url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/648/original/petra-hero-img.jpg?1704660054")
           no-repeat bottom / cover;
@@ -134,7 +131,7 @@
       letter-spacing: 4px;
     }
     h3 {
-      margin: 150px 0 100px;
+      margin: 100px 0;
     }
     h5 {
       margin-bottom: 100px;
@@ -158,15 +155,17 @@
       margin-bottom: 0;
     }
     p {
-      font-size: 24px;
+      font-size: 32px;
       font-weight: 400;
       line-height: 1.6;
       text-indent: 30px;
     }
-
     a {
       text-decoration: none;
       color: #0acaf0;
+    }
+    section {
+      margin: 30px 80px 0;
     }
     section a img:hover {
       transform: scale(1.2);
@@ -174,14 +173,71 @@
     }
     footer p {
       background: #9a7a7d;
-      font-size: 14px;
+      font-size: 18px;
+      text-indent: 0;
       padding: 50px 0;
     }
-
-    @media screen and (max-width: 767px) {
-      header {
-        height: 70vh;
+    .container {
+      max-width:98%;
+    }
+    .embed-responsive {
+        height: 45vh;
       }
+      .card p {
+        text-indent: 0;
+      }
+    .embed-responsive-item {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width:1250px) {
+       p {
+        font-size: 24px;
+      }
+      .card p {
+        font-size: 20px;
+        
+      }
+    }
+    @media (max-width:1024px){
+      header {
+        padding-top:300px;
+      }
+     .card p {
+        font-size: 20px;
+        text-indent: 0;
+      }
+      .embed-responsive {
+        height: 20vh;
+      }
+    }
+    @media (max-width: 768px){
+     header h1 {
+        font-size: 50px;
+      }
+        header h5 {
+        font-size: 20px;
+      }
+      header h3 {
+        font-size: 25px;
+      }
+      h2 {
+        font-size: 30px;
+      }
+       h3 {
+        font-size: 18px;
+        
+      }
+      p {
+        font-size: 20px;
+      }
+      .container {
+        max-width: 95%;
+      }
+    }
+    @media (max-width: 640px) {
+    
       header h1 {
         font-size: 40px;
       }
@@ -204,9 +260,7 @@
       h6 {
         font-size: 10px;
       }
-      p {
-        font-size: 16px;
-      }
+      
       footer p {
         padding: 10px 100px;
         font-size: 10px;
@@ -227,7 +281,7 @@
   </style>
   <body>
     <div class="container">
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar navbar-expand-lg sticky-top">
         <div class="icon">🇯🇴</div>
         <button
           class="navbar-toggler"
@@ -278,7 +332,7 @@
             Jordan's Ancient Temple, Al Khazneh (The Treasury)
           </h2>
           <h5 data-aos="fade-left">Petra and the Nabataeans</h5>
-          <div class="row justify-content-evenly pt-5">
+          <div class="row justify-content-evenly align-items-center">
             <div class="col-lg-5 justify-content-center" data-aos="fade-up">
               <p>
                 Let me tell you about one of the coolest historical sites you'll
@@ -324,7 +378,7 @@
               </p>
             </div>
           </div>
-          <div class="row justify-content-evenly">
+          <div class="row justify-content-evenly align-items-center">
             <div
               class="col-lg-5 col-md-10 justify-content-center"
               data-aos="fade-right"
@@ -350,11 +404,14 @@
                   >Nabataean civilization</a
                 >. Among all the astonishing structures carved into the cliffs
                 by the Nabataeans, the Treasury stands out due to its impressive
-                ancient engineering. It also features influences from Greek and
-                Roman architectural styles, further adding to its remarkable
-                appeal. Do you also admire this magnificent structure?
+                ancient engineering.
               </p>
             </div>
+            <p class="pt-5">
+              It also features influences from Greek and Roman architectural
+              styles, further adding to its remarkable appeal. Do you also
+              admire this magnificent structure?
+            </p>
           </div>
           <h3 data-aos="fade-left">
             👉🏼 To learn more about Al-Khazneh, read it here on
@@ -383,10 +440,10 @@
             coolness of the shaded canyon walls, and the rough texture of the
             carved stone.
           </p>
-          <div class="container">
+          <div class="container my-5">
             <div class="row justify-content-evenly">
               <div class="col-lg-4 col-sm-8">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <img
                       src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/792/original/petra-airport.jpg?1704755422"
@@ -398,7 +455,7 @@
                     <h4 class="text-center">FLY</h4>
                     <p class="text-center">
                       (AQJ) King Hussein International is the nearest airport to
-                      Petra. I recommend flying with Emirates Airlines
+                      Petra. I recommend flying with Emirates Airlines for a seamless flight
                     </p>
                     <a
                       href="https://www.qatarairways.com/en-us/homepage.html?CID=SXUS23456792M&account=Google-AMERICAS-US-EN-Brand&campaign=US-Brand-Hero-EN_exact&adgroup=qatar+airways&term=qatar+airways&&&&&gad_source=1&gclid=CjwKCAiA1-6sBhAoEiwArqlGPjRmTzEZSpVAasFn6RgO6TZfwLX-nZgMD0UUfANy4gZMwKkV4np4-BoCcEEQAvD_BwE&gclsrc=aw.ds"
@@ -411,11 +468,11 @@
               </div>
 
               <div class="col-lg-4 col-sm-8">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d885096.9195072479!2d34.708139034184754!3d29.938887871443765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x15006f47adc6e083%3A0x436bd9e1e7d5f9e6!2sKing%20Hussein%20International%20Airport%2C%20Airport%20St%2C%20Aqaba%2C%20Jordan!3m2!1d29.6090989!2d35.020793399999995!4m5!1s0x15016ef1703b6071%3A0x199bf908679a2291!2sPetra%2C%20Jordan!3m2!1d30.3284544!2d35.4443622!5e0!3m2!1sen!2sus!4v1704756788640!5m2!1sen!2sus"
-                      class="embed"
+                      class="embed-responsive w-100 "
                       style="border: 0"
                       allowfullscreen=""
                       loading="lazy"
@@ -425,7 +482,7 @@
                   <div class="card-body">
                     <h4 class="text-center">DRIVE</h4>
                     <p class="text-center">
-                      Rent a car or acquire a private transfer
+                      Rent a car or acquire a private transfer to Petra 
                     </p>
                     <a
                       href="https://www.viator.com/Jordan-tours/Private-Drivers/d744-g15-c32762"
@@ -438,7 +495,7 @@
               </div>
 
               <div class="col-lg-4 col-sm-8">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <img
                       src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/794/original/petra-siq.jpg?1704757330"
@@ -471,9 +528,7 @@
               A sneak peek of what it's like to walk the Siq trail to The Al
               Khazneh Temple
             </h5>
-            <!-- <div class="container video-container justify-content-center">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe
+               <iframe
                   src="https://www.youtube.com/embed/fpO--cFszts?si=wT7a6tZ_QIDJDe6W"
                   class="embed-responsive-item"
                   title="YouTube video player"
@@ -482,8 +537,7 @@
                   allowfullscreen
                   data-aos="fade-left"
                 ></iframe>
-              </div>
-            </div> -->
+           
             <h3 data-aos="fade-left">
               💁🏽‍♀️ After admiring Al-Khazneh temple don't miss these
               <a
