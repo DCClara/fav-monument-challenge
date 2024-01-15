@@ -32,15 +32,18 @@
     }
     body.dark-theme {
       color: #000;
-      background-color: #ffebeb;
+      background-color: #fff;
     }
     nav {
       background-color: #9a7a7d;
     }
+    nav ul {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+    }
     nav a {
       color: #000;
-      text-align: center;
-      padding: 14px 16px;
       text-decoration: none;
     }
     nav a:hover {
@@ -48,21 +51,28 @@
       color: #000;
     }
     nav .icon {
-      font-size: 24px;
-      margin-left: 10px;
-      padding-right: 10px;
+      font-size: 44px;
+      margin-left: 100px;
+      padding-right: 20px;
     }
-
     nav .navbar-toggler {
       border: none;
       color: #fff;
     }
     nav .toggle-label {
-      margin-right: 8px;
       color: #fff;
     }
     nav .navbar-collapse {
       justify-content: space-between;
+      align-items: center;
+    }
+    nav .toggle-container {
+      display: flex;
+      justify-content: center;
+      margin-right: 100px;
+    }
+    nav .navbar-toggler-icon {
+      margin-right: 100px;
     }
     nav .toggle-switch {
       position: relative;
@@ -110,14 +120,13 @@
     header {
       text-align: center;
       color: white;
-      height: 90vh;
-      padding-top: 200px;
+      height: 92vh;
+      padding-top: 260px;
       background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.1)),
         url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/648/original/petra-hero-img.jpg?1704660054")
           no-repeat bottom / cover;
       box-sizing: border-box;
     }
-
     h1,
     h2,
     h3,
@@ -141,7 +150,7 @@
       letter-spacing: 5px;
     }
     header h1 {
-      font-size: 96px;
+      font-size: 120px;
       line-height: 1;
       margin: 30px 0;
     }
@@ -165,7 +174,7 @@
       color: #0acaf0;
     }
     section {
-      margin: 30px 80px 0;
+      margin: 80px 80px 0;
     }
     section a img:hover {
       transform: scale(1.2);
@@ -208,6 +217,12 @@
       }
       .embed-responsive {
         height: 20vh;
+      }
+    }
+    @media (max-width: 992px) {
+      nav .toggle-container {
+        margin-right: 0;
+        padding: 10px;
       }
     }
     @media (max-width: 768px) {
@@ -292,82 +307,65 @@
     }
   </style>
   <body>
-    
-      <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="icon">🇯🇴</div>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#travel">Travel</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#tours">Tours</a>
-            </li>
-          </ul>
-          <div class="navbar-right">
-            <div class="toggle-container">
-              <label class="toggle-switch">
-                <input type="checkbox" id="themeToggle" />
-                <span class="slider"></span>
-              </label>
-              <span class="toggle-label">☀️</span>
-            </div>
-          </div>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="icon">🇯🇴</div>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#travel">Travel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#tours">Tours</a>
+          </li>
+        </ul>
+
+        <div class="toggle-container">
+          <label class="toggle-switch">
+            <input type="checkbox" id="themeToggle" />
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label">☀️</span>
         </div>
-      </nav>
-      <header id="home">
-        <div class="hero">
-          <h5 data-aos="fade-down">The Treasury of Petra, Jordan</h5>
-          <h1 data-aos="fade-left">Al-Khazneh Temple</h1>
-          <h3 data-aos="fade-up">One Of The 7 Wonders Of The World</h3>
-        </div>
-      </header>
-<div class="container">
+      </div>
+    </nav>
+    <header id="home">
+      <div class="hero">
+        <h5 data-aos="fade-down">The Treasury of Petra, Jordan</h5>
+        <h1 data-aos="fade-left">Al-Khazneh Temple</h1>
+        <h3 data-aos="fade-up">One Of The 7 Wonders Of The World</h3>
+      </div>
+    </header>
+    <div class="container">
       <main>
         <section class="about-section" id="about">
           <h2 data-aos="fade-down">
-            Jordan's Ancient Temple, Al Khazneh (The Treasury)
+            Jordan's Ancient Temple, Al-Khazneh (The Treasury)
           </h2>
           <h5 data-aos="fade-left">Petra and the Nabataeans</h5>
           <div class="row justify-content-evenly align-items-center">
-            <div class="col-lg-5 justify-content-center" data-aos="fade-up">
+            <div class="col-lg-8 justify-content-center" data-aos="fade-up">
               <p>
                 Let me tell you about one of the coolest historical sites you'll
-                ever come across - Al Khazneh! Also known as the Treasury of
+                ever come across - Al-Khazneh! Also known as the Treasury of
                 Petra. It's nestled in the rugged landscapes of the Petra
                 Archaeological Park in Jordan, and it looks like something
                 straight out of a movie.
               </p>
-            </div>
-            <div
-              class="col-lg-5 col-md-10 justify-content-center"
-              data-aos="fade-left"
-            >
-              <img
-                class="img-fluid rounded"
-                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/752/original/nabataean-map.png?1704738631"
-                alt="Nabataean map"
-              />
-              <h6 class="mt-1 text-end">A map of the Nabataean Kingdom</h6>
-            </div>
-          </div>
-          <div class="row justify-content-evenly pt-5 pb-5">
-            <div class="col-lg-5 justify-content-center" data-aos="fade-left">
               <p>
                 This awesome facade was carved around 2,000 years ago by the
                 Nabataean people from vibrant red cliffs. Originally intended as
@@ -380,19 +378,31 @@
                 >, it eventually transformed into a sacred space for worship.
               </p>
             </div>
-            <div class="col-lg-5 justify-content-center" data-aos="fade-right">
-              <p>
-                But here's the kicker - in the 19th century, local Bedouins saw
-                the majestic structure and thought it must hide a hidden
-                treasure. So, they started calling it the Treasury! Who knows if
-                there's actually any treasure in there, but it sure makes for a
-                great story.
-              </p>
+            <div
+              class="col-lg-4 col-md-10 justify-content-center"
+              data-aos="fade-left"
+            >
+              <img
+                class="img-fluid rounded"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/109/752/original/nabataean-map.png?1704738631"
+                alt="Nabataean map"
+              />
+              <h6 class="mt-1 text-end">A map of the Nabataean Kingdom</h6>
             </div>
+          </div>
+          <div class="row justify-content-evenly pt-2 pb-2">
+            <div
+              class="col-lg-6 justify-content-center"
+              data-aos="fade-left"
+            ></div>
+            <div
+              class="col-lg-6 justify-content-center"
+              data-aos="fade-right"
+            ></div>
           </div>
           <div class="row justify-content-evenly align-items-center">
             <div
-              class="col-lg-5 col-md-10 justify-content-center"
+              class="col-lg-4 col-md-10 justify-content-center"
               data-aos="fade-right"
             >
               <img
@@ -405,7 +415,14 @@
                 rock-cut tombs in Petra
               </h6>
             </div>
-            <div class="col-lg-5 justify-content-center" data-aos="fade-up">
+            <div class="col-lg-8 justify-content-center" data-aos="fade-up">
+              <p>
+                But here's the kicker - in the 19th century, local Bedouins saw
+                the majestic structure and thought it must hide a hidden
+                treasure. So, they started calling it the Treasury! Who knows if
+                there's actually any treasure in there, but it sure makes for a
+                great story.
+              </p>
               <p>
                 Al Khazneh is an outstanding example of the exquisite
                 craftsmanship of the
@@ -418,12 +435,12 @@
                 by the Nabataeans, the Treasury stands out due to its impressive
                 ancient engineering.
               </p>
+              <p>
+                It also features influences from Greek and Roman architectural
+                styles, further adding to its remarkable appeal. Do you also
+                admire this magnificent structure?
+              </p>
             </div>
-            <p class="pt-5">
-              It also features influences from Greek and Roman architectural
-              styles, further adding to its remarkable appeal. Do you also
-              admire this magnificent structure?
-            </p>
           </div>
           <h3 data-aos="fade-left">
             👉🏼 To learn more about Al-Khazneh, read it here on
@@ -438,15 +455,15 @@
           <hr />
         </section>
         <section class="travel-section" id="travel">
-          <h2 data-aos="fade-down">Travel to Jordan and visit Al Khazneh</h2>
+          <h2 data-aos="fade-down">Travel to Jordan and visit Al-Khazneh</h2>
           <h5 data-aos="fade-up">
             Experience the incrediable architecture and history
           </h5>
           <p data-aos="fade-right">
-            Visiting Petra is an experience that engages all your senses. You
-            can hear the sounds of the bustling city, the calls of the vendors
-            selling spices and souvenirs, and the echoes of footsteps on the
-            stone paths. You can smell the fragrant spices in the air, the
+            Visiting Al-Khazneh is an experience that engages all your senses.
+            You can hear the sounds of the bustling city, the calls of the
+            vendors selling spices and souvenirs, and the echoes of footsteps on
+            the stone paths. You can smell the fragrant spices in the air, the
             incense burning in the temples, and the dust kicked up by the
             camels. You can feel the sun beating down on the red cliffs, the
             coolness of the shaded canyon walls, and the rough texture of the
@@ -539,8 +556,8 @@
         <section>
           <h2 data-aos="fade-down">Virtual Tour</h2>
           <h5 data-aos="fade-up">
-            A sneak peek of what it's like to walk the Siq trail to The Al
-            Khazneh Temple
+            A sneak peek of what it's like to walk the Siq trail to The
+            Al-Khazneh Temple
           </h5>
           <iframe
             src="https://www.youtube.com/embed/fpO--cFszts?si=wT7a6tZ_QIDJDe6W"
@@ -638,42 +655,41 @@
           </h3>
         </section>
       </main>
-      </div>
-      <footer class="text-center py-3">
-        <p class="mb-0">
-          This project was coded by
-          <a href="https://dcasacodez.netlify.app" target="_blank"
-            >Danielle Casa</a
-          >
-          for the
-          <a
-            href="https://www.shecodes.io/contests/your-favorite-monument"
-            target="_blank"
-            >SheCodes.io Favorite Monument challenge</a
-          >
-          and is
-          <a
-            href="https://github.com/DCClara/fav-monument-challenge"
-            target="_blank"
-          >
-            open-sourced on GitHub</a
-          >.
-        </p>
-      </footer>
+    </div>
+    <footer class="text-center py-3">
+      <p class="mb-0">
+        This project was coded by
+        <a href="https://dcasacodez.netlify.app" target="_blank"
+          >Danielle Casa</a
+        >
+        for the
+        <a
+          href="https://www.shecodes.io/contests/your-favorite-monument"
+          target="_blank"
+          >SheCodes.io Favorite Monument challenge</a
+        >
+        and is
+        <a
+          href="https://github.com/DCClara/fav-monument-challenge"
+          target="_blank"
+        >
+          open-sourced on GitHub</a
+        >.
+      </p>
+    </footer>
 
-      <script>
-        const themeToggle = document.getElementById("themeToggle");
-        const body = document.body;
+    <script>
+      const themeToggle = document.getElementById("themeToggle");
+      const body = document.body;
 
-        themeToggle.addEventListener("change", () => {
-          body.classList.toggle("dark-theme");
-        });
+      themeToggle.addEventListener("change", () => {
+        body.classList.toggle("dark-theme");
+      });
 
-        AOS.init({
-          duration: 1000,
-          offset: 100,
-        });
-      </script>
-    
+      AOS.init({
+        duration: 1000,
+        offset: 100,
+      });
+    </script>
   </body>
 </html>
